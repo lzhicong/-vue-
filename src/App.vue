@@ -1,5 +1,6 @@
 <template>
   <div id="app1">
+    <p>第一次修改</p>
     <img src="./assets/logo.png">
     <router-view/>
   </div>
