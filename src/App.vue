@@ -3,7 +3,7 @@
     <p>第一次修改</p>
     <img src="./assets/logo.png">
     <p>{{a}}</p>
-    <div id="echarts" :style="{width: '326px', height: '250px'}"></div>
+    <div id="echarts" :style="{width: '326px', height: '250px', border: '1px solid red'}"></div>
     <router-view/>
   </div>
 </template>
@@ -25,15 +25,23 @@ export default {
        xAxis: {
         type: 'category',
         data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-    },
-    yAxis: {
+       },
+       yAxis: {
         type: 'value'
-    },
-    series: [{
+       },
+       grid: {
+        left:'20%',
+        // show:true,
+        // borderColor:'yellow',
+        tooltip: {
+         show:true,
+        },
+        },
+       series: [{
         data: [820, 932, 901, 934, 1290, 1330, 1320],
         type: 'line'
-    }]
-};
+       }]
+       };
 
       // 为echarts对象加载数据
       myChart.setOption(option);
@@ -42,7 +50,6 @@ export default {
   mounted(){
   this.drawLine();
   }
-
 }
 </script>
 
