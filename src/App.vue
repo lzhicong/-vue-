@@ -3,7 +3,7 @@
     <p>第一次修改</p>
     <img src="./assets/logo.png">
     <p>{{a}}</p>
-    <div id="echarts" :style="{width: '326px', height: '250px', border: '1px solid red'}"></div>
+    <div id="echarts" :style="{width: '326px', height: '250px', border: '1px solid red',position:'relative',left:'50%' }"></div>
     <router-view/>
   </div>
 </template>
